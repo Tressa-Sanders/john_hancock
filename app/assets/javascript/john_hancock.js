@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 }, false)
 
-document.getElementById('clear').addEventListener('click', function () {
-    signaturePad.clear();
-});
+function signatureClear() {
+  var canvas = document.getElementById("JohnHancock-canvas");
+  var context = canvas.getContext("2d");
+  context.clearRect(0, 0, canvas.width, canvas.height);
+}

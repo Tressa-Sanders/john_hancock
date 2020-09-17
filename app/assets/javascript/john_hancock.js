@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function(){
     parent_form.onsubmit = function() {
       hidden_field.value = signaturePad.toDataURL()
     }
-
+    
     function resizeCanvas() {
       var ratio =  Math.max(window.devicePixelRatio || 1, 1);
       canvas.width = canvas.offsetWidth * ratio;
@@ -24,3 +24,7 @@ document.addEventListener('DOMContentLoaded', function(){
     resizeCanvas();
   }
 }, false)
+
+document.getElementById('clear').addEventListener('click', function () {
+    signaturePad.clear();
+});
